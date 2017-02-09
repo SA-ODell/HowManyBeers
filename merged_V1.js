@@ -1,4 +1,4 @@
-var userBMR = 0
+var userBMR;
 
 $('#userDataSubmit').click(function(event) {
   //obtain user inputs
@@ -115,5 +115,5 @@ $(document).on("click", ".yourBeerDisplayBox", function() {
   }
 
 
-  alert('You get ' + yourBeers + 'today!');
+  alert('You get ' + yourBeers + ' today!');
 })
