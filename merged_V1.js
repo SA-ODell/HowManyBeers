@@ -74,4 +74,46 @@ $(document).on("click", ".foodResultContainer", function(e) {
 	dailyCals += parseInt($(this).find('.calories').text())
 	$('.dailyTotal').text('Daily Running Calorie Total: ' + dailyCals)
 	$('.resultBox').html('')
+  //return dailyCals
+})
+
+
+var yourBeers = 0
+var selectedBeer = document.getElementById("beerChoice").value
+switch (selectedBeer) {
+  case "1":
+    yourBeers = parseInt((dailyCals - userBMR)/90)
+    break;
+  case "2":
+    yourBeers = parseInt((dailyCals - userBMR)/150)
+    break;
+  case "3":
+    yourBeers = parseInt((dailyCals - userBMR)/180)
+    break;
+  case "4":
+    yourBeers = parseInt((dailyCals - userBMR)/220)
+    break;
+}
+
+
+$(document).on("click", ".yourBeerDisplayBox", function() {
+  var yourBeers
+  var selectedBeer = document.getElementById("beerChoice").value
+  switch (selectedBeer) {
+    case "1":
+      yourBeers = parseInt((userBMR - dailyCals)/90)
+      break;
+    case "2":
+      yourBeers = parseInt((userBMR - dailyCals)/150)
+      break;
+    case "3":
+      yourBeers = parseInt((userBMR - dailyCals)/180)
+      break;
+    case "4":
+      yourBeers = parseInt((userBMR - dailyCals)/220)
+      break;
+  }
+
+
+  alert('You get ' + yourBeers + 'today!');
 })
