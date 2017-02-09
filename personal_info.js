@@ -4,7 +4,6 @@
 var userBMR = 0
 
 $('#userDataSubmit').click(function(event) {
-
   //obtain user inputs
     var userAgeNum = parseInt(document.getElementById("userAge").value)
     var userHeightNum = parseInt(document.getElementById("userHeight").value)
