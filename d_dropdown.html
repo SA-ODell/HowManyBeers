@@ -1,0 +1,45 @@
+<select id="drinkChoice" onchange="showForm()">
+    <option value="0">Select Option</option>
+    <option value="1">Beer</option>
+    <option value="2">Wine</option>
+</select>
+
+<div id="beerChoice" style="display:none">
+    <form name="form1">
+        <select id="drinkChoice" onchange="showForm()">
+            <option value="0">Select Option</option>
+            <option value="1">Light Beer</option>
+            <option value="2">Bud/Miller/Coors</option>
+            <option value="3">Light/Medium Craft</option>
+            <option value="4">Dark Craft</option>
+        </select>
+    </form>
+</div>
+
+<!-- <div id="f2" style="display:none">
+    <form name="form2">
+        <select id="drinkChoice" onchange="showForm()">
+            <option value="0">Select Option</option>
+            <option value="1">Option 2A</option>
+            <option value="2">Option 2B</option>
+        </select>
+    </form>
+</div> -->
+
+<script type="text/javascript">
+    function showForm() {
+        var selectOption = document.getElementById("drinkChoice").value;
+        if (selectOption == 1) {
+            document.getElementById("beerChoice").style.display = "block";
+            document.getElementById("f2").style.display = "none";
+        }
+        if (selectOption == 2) {
+            document.getElementById("f2").style.display = "block";
+            document.getElementById("beerChoice").style.display = "none";
+        }
+        if (selectOption == 0) {
+            document.getElementById("f2").style.display = "none";
+            document.getElementById("beerChoice").style.display = "none";
+        }
+    }
+</script>
