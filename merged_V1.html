@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>How Many Beers?</title>
+
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<link rel="stylesheet" type="text/css" href="daily_calorie_counter.css">
+
+
+
+  </head>
+
+  <body>
+
+    <!-- <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Mile High Devs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">About</a></li>
+                    <li><a href="#" target="_blank">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>  -->
+
+
+    <div class="bootstrap-iso">
+       <div class="container-fluid">
+        <div class="row">
+         <div class="col-md-6 col-sm-6 col-xs-12">
+          <form method="post">
+           <div class="form-group ">
+            <label class="control-label " for="name">
+             Name
+            </label>
+            <input class="form-control" id="userName" name="name" placeholder="Joe BeerDrinker" type="text"/>
+
+            <label class="control-label requiredField" for="select">
+                  Watcha drinking?
+               <span class="asteriskField">
+                *
+               </span>
+            </label>
+                <select class="select form-control" id="beerChoice" name="select">
+
+                <option value="Light">
+                      Light
+                </option>
+                <option value="Bud/Miller/Coors">
+                      Bud/Miller/Coors
+                </option>
+                <option value="Light/Medium Craft">
+                      Light/Medium Craft
+                </option>
+                <option value="Dark Craft">
+                      Dark Craft
+                </option>
+                </select>
+                    <span class="help-block" id="hint_select">
+                      Pick one
+                    </span>
+           </div>
+
+           <div class="form-group ">
+             <label class="control-label requiredField" for="select">
+               Sorry, gotta ask: Gender?
+               <span class="asteriskField">
+                 *
+               </span>
+             </label>
+                <select class="select form-control" id="userGender" name="select">
+                  <option value="Male">
+                    Male
+                  </option>
+                  <option value="Female">
+                    Female
+                  </option>
+                </select>
+                <span class="help-block" id="hint_select">
+                  (With which gender's metabolism do you self-identify?)
+                </span>
+           </div>
+
+           <div class="form-group ">
+             <label class="control-label requiredField" for="number">
+               Age in Earth Years
+               <span class="asteriskField">
+                 *
+               </span>
+             </label>
+             <input class="form-control" id="userAge" name="number" placeholder="21" type="text"/>
+          </div>
+
+            <div class="form-group ">
+              <label class="control-label requiredField" for="number">
+                Height in inches (no units)
+                <span class="asteriskField">
+                  *
+                </span>
+              </label>
+              <input class="form-control" id="userHeight" name="number" placeholder="72" type="text"/>
+          </div>
+
+           <div class="form-group ">
+             <label class="control-label requiredField" for="number1">
+               Weight in pounds (no units)
+               <span class="asteriskField">
+                 *
+               </span>
+            </label>
+              <input class="form-control" id="userWeight" name="number1" placeholder="175" type="text"/>
+           </div>
+
+           <div class="form-group">
+            <div>
+             <button class="btn btn-primary" id=userDataSubmit name="submit" type="submit" >
+              Submit
+             </button>
+            </div>
+           </div>
+         </div>
+
+             <div id="bmrResultsBox"></div>
+
+          </form>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <h1>Nutritionix Search</h1>
+
+    	<div class="dailyTotal">Daily Running Calorie Total: </div> <br/>
+
+    	<form  id="searchForm">
+        <input type="text"  id="searchBar">
+        <button type="submit" onclick='searchValue()'>Search</button>
+      </form>
+
+        <div class="resultBox"></div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src='merged_V1.js'></script>
+
+
+</body>
