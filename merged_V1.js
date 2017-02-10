@@ -7,6 +7,7 @@ $('#userDataSubmit').click(function(event) {
     var userWeightNum = parseInt(document.getElementById("userWeight").value)
     var userGenderValue = document.getElementById("userGender").value
     var userSelection = document.getElementById("beerChoice").value
+    var userExercise = document.getElementById("exerciseLevel").value
 
     // Males: BMR = (15.875*Height + 4.54*Weight - 5*Age + 5) * 1.5
     // Women: BMR = (15.875*Height + 4.54*Weight - 5*Age - 161) * 1.5
@@ -14,10 +15,10 @@ $('#userDataSubmit').click(function(event) {
     // use gender-appropriate formula
     switch (userGenderValue) {
       case 'Male':
-        userBMR = parseInt((15.875*userHeightNum + 4.54*userWeightNum - 5*userAgeNum + 5) * 1.5);
+        userBMR = parseInt((15.875*userHeightNum + 4.54*userWeightNum - 5*userAgeNum + 5) * 1.3);
         break;
       case "Female":
-      userBMR = parseInt((15.875*userHeightNum + 4.54*userWeightNum - 5*userAgeNum - 161) * 1.5);
+      userBMR = parseInt((15.875*userHeightNum + 4.54*userWeightNum - 5*userAgeNum - 161) * 1.3);
       break;
     }
     //alert("Your daily calorie allowance is " + userBMR);
@@ -77,25 +78,6 @@ $(document).on("click", ".foodResultContainer", function(e) {
   //return dailyCals
 })
 
-
-var yourBeers = 0
-var selectedBeer = document.getElementById("beerChoice").value
-switch (selectedBeer) {
-  case "1":
-    yourBeers = parseInt((dailyCals - userBMR)/90)
-    break;
-  case "2":
-    yourBeers = parseInt((dailyCals - userBMR)/150)
-    break;
-  case "3":
-    yourBeers = parseInt((dailyCals - userBMR)/180)
-    break;
-  case "4":
-    yourBeers = parseInt((dailyCals - userBMR)/220)
-    break;
-}
-
-
 $(document).on("click", ".yourBeerDisplayBox", function() {
   var yourBeers
   var selectedBeer = document.getElementById("beerChoice").value
@@ -113,7 +95,6 @@ $(document).on("click", ".yourBeerDisplayBox", function() {
       yourBeers = parseInt((userBMR - dailyCals)/220)
       break;
   }
-
-
+  $('.yourBeerDisplayBox').text('You earned ' + yourBeers + ' tonight!')
   alert('You get ' + yourBeers + ' today!');
 })

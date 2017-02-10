@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>How Many Beers?</title>
+    <title>Beer Calculations</title>
 
     <!-- Bootstrap -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<link rel="stylesheet" type="text/css" href="daily_calorie_counter.css">
+	   <link rel="stylesheet" type="text/css" href="merged.css">
 
 
 
@@ -21,8 +21,9 @@
 
   <body>
 
-    <!-- <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -32,19 +33,26 @@
                 </button>
                 <a class="navbar-brand" href="#">Mile High Devs</a>
             </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#" target="_blank">Home</a></li>
-                    <li><a href="#" target="_blank">About</a></li>
+                    <li class="active"><a href="/" target="_blank">Home</a></li>
+                    <li><a href="/" target="_blank">About</a></li>
                     <li><a href="#" target="_blank">Get Started</a></li>
                 </ul>
             </div>
         </div>
-    </nav>  -->
+    </nav>
+
 
 
     <div class="bootstrap-iso">
        <div class="container-fluid">
+         <div class="page-header">
+           <h1>Let's talk about you. <small>It'll only take a minute.</small></h1>
+         </div>
+
+
         <div class="row">
          <div class="col-md-6 col-sm-6 col-xs-12">
           <form method="post">
@@ -130,38 +138,77 @@
               <input class="form-control" id="userWeight" name="number1" placeholder="175" type="text"/>
            </div>
 
+           <label class="control-label requiredField" for="select">
+                 Exercise/Work/Activity Level
+              <span class="asteriskField">
+               *
+              </span>
+           </label>
+               <select class="select form-control" id="exerciseLevel" name="select">
+
+               <option value="1">
+                     Exercise? What's that?
+               </option>
+               <option value="2">
+                     Running? Only if someone's chasing me.
+               </option>
+               <option value="3">
+                     Moderate exercise + work
+               </option>
+               <option value="4">
+                     When's the next Ironman?
+               </option>
+               </select>
+                   <span class="help-block" id="hint_select">
+                     Pick one
+                   </span>
+
+
+
            <div class="form-group">
-            <div>
+            <!-- <div> -->
              <button class="btn btn-primary" id=userDataSubmit name="submit" type="submit" >
               Submit
              </button>
-            </div>
+            <!-- </div> -->
            </div>
          </div>
-
-             <div id="bmrResultsBox"></div>
-
           </form>
+          <div id="bmrResultsBox"></div>
          </div>
         </div>
        </div>
       </div>
 
-      <h1>Nutritionix Search</h1>
 
-    	<div class="dailyTotal">Daily Running Calorie Total: </div> <br/>
+      <div class="bootstrap-iso">
+         <div class="container-fluid">
+           <div class="page-header">
+             <h2>Now time for chow. <small>Watcha eating?.</small></h2>
+           </div>
 
-    	<form  id="searchForm">
-        <input type="text"  id="searchBar">
-        <button type="submit" onclick='searchValue()'>Search</button>
-      </form>
+            <h3>Nutritionix Search</h3>
+
+    	       <div class="dailyTotal">Daily Running Calorie Total: </div> <br/>
+             <div class="dailyLeftOver">
+
+    	        <form  id="searchForm">
+                <input type="text"  id="searchBar">
+                <button type="submit" onclick='searchValue()'>Search</button>
+              </form>
 
 
-        <!--placeholder for food results  -->
-        <div class="resultBox"></div>
+              <!--placeholder for food results  -->
+              <div class="resultBox"></div>
 
-        <!--placeholder for your beer results  -->
-        <div class="yourBeerDisplayBox">How many beers did you earn?  </div>
+              <!--placeholder for your beer results  -->
+              <!-- <button type="button" id="readyForBeer" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"> Ready for some beer?</button> -->
+              <div class="borderBox">
+                <div class="yourBeerDisplayBox">How many beers did you earn?<br/></div>
+              </div>
+
+            </div>
+          </div>
 
 
 

@@ -1,7 +1,5 @@
-// event handler upon clicking submit button
-
-
-var userBMR = 0
+var userBMR;
+//var yourBeers;
 
 $('#userDataSubmit').click(function(event) {
   //obtain user inputs
@@ -9,7 +7,7 @@ $('#userDataSubmit').click(function(event) {
     var userHeightNum = parseInt(document.getElementById("userHeight").value)
     var userWeightNum = parseInt(document.getElementById("userWeight").value)
     var userGenderValue = document.getElementById("userGender").value
-    var userSelection = document.getElementById("beerChoice").value
+    //var userSelection = document.getElementById("beerChoice").value
 
     // Males: BMR = (15.875*Height + 4.54*Weight - 5*Age + 5) * 1.5
     // Women: BMR = (15.875*Height + 4.54*Weight - 5*Age - 161) * 1.5
@@ -27,5 +25,7 @@ $('#userDataSubmit').click(function(event) {
 
     $('#bmrResultsBox').text('Your daily calorie allowance is: ' + userBMR);
     event.preventDefault(event);
+
+    localStorage.setItem('BMR', userBMR);
 
 });
