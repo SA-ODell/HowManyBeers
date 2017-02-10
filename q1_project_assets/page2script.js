@@ -9,9 +9,6 @@ $('#userDataSubmit').click(function(event) {
     var userSelection = document.getElementById("beerChoice").value
     var userExercise = document.getElementById("exerciseLevel").value
 
-    // Males: BMR = (15.875*Height + 4.54*Weight - 5*Age + 5) * 1.5
-    // Women: BMR = (15.875*Height + 4.54*Weight - 5*Age - 161) * 1.5
-
     // use gender-appropriate formula
     switch (userGenderValue) {
       case 'Male':
@@ -21,7 +18,6 @@ $('#userDataSubmit').click(function(event) {
       userBMR = parseInt((15.875*userHeightNum + 4.54*userWeightNum - 5*userAgeNum - 161) * 1.3);
       break;
     }
-    //alert("Your daily calorie allowance is " + userBMR);
 
     $('#bmrResultsBox').text('Your daily calorie allowance is: ' + userBMR);
     event.preventDefault(event);
@@ -32,9 +28,6 @@ var myAppId = '8a645784';
 var myAppKey = '311449cd85d0a73dd09cad74ee661a9d'
 var dailyCals = 0
 
-
-// Males: BMR = (15.875*Height + 4.54*Weight - 5*Age + 5) * 1.5
-// Women: BMR = (15.875*Height + 4.54*Weight - 5*Age - 161) * 1.4
 
 function callNixApi(userInput) {
 	var calledSearchItem;
@@ -65,17 +58,14 @@ function searchValue() {
 	callNixApi(listValue);
 }
 
-// keeps page from reformatting and forgetting everything
 $('#searchForm').submit(function(e) {
 	e.preventDefault();
 });
 
-// event handler
 $(document).on("click", ".foodResultContainer", function(e) {
 	dailyCals += parseInt($(this).find('.calories').text())
 	$('.dailyTotal').text('Daily Running Calorie Total: ' + dailyCals)
 	$('.resultBox').html('')
-  //return dailyCals
 })
 
 $(document).on("click", ".yourBeerDisplayBox", function() {

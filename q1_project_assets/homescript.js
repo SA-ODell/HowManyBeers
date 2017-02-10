@@ -1,6 +1,3 @@
-// working file for rough draft
-
-
 var myAppId = '8a645784';
 var myAppKey = '311449cd85d0a73dd09cad74ee661a9d'
 var dailyCals = 0
@@ -9,13 +6,8 @@ var userHeight
 var userWeight
 var userGender = ""
 var userBMR
-
 // Males: BMR = (15.875*Height + 4.54*Weight - 5*Age + 5) * 1.5
 // Women: BMR = (15.875*Height + 4.54*Weight - 5*Age - 161) * 1.4
-
-
-
-
 function callNixApi(userInput) {
 	var calledSearchItem;
 	$('.resultBox').html('');
@@ -38,8 +30,6 @@ function callNixApi(userInput) {
 			});
 		}
 	});
-
-
 }
 
 function searchValue() {
@@ -47,14 +37,10 @@ function searchValue() {
 	callNixApi(listValue);
 }
 
-
-// keeps page from reformatting and forgetting everything
 $('#searchForm').submit(function(e) {
 	e.preventDefault();
 });
 
-
-// event handler
 $(document).on("click", ".foodResultContainer", function(e) {
 	dailyCals += parseInt($(this).find('.calories').text())
 	$('.dailyTotal').text('Daily Running Calorie Total: ' + dailyCals)
