@@ -50,9 +50,9 @@ function callNixApi(userInput) {
 				var foodLists = item.fields
 				$('.resultBox').append(
 					'<div class="foodResultContainer">'+
-						'<h2>' + foodLists.brand_name +  "  " +  foodLists.item_name + '</h2>' +
-						'<h3>Calories: <span class="calories">' + foodLists.nf_calories + '</span></h3>' +
-						'<h3>Serving Size: ' + foodLists.nf_serving_size_qty + ' ' + foodLists.nf_serving_size_unit +'</h3>' +
+						'<h4>' + foodLists.brand_name +  "  " +  foodLists.item_name + '</h4>' +
+						'<h5>Calories: <span class="calories">' + foodLists.nf_calories + '</span></h5>' +
+						'<h5>Serving Size: ' + foodLists.nf_serving_size_qty + ' ' + foodLists.nf_serving_size_unit +'</h5>' +
 					'</div>'
 					);
 			});
@@ -98,3 +98,8 @@ $(document).on("click", ".yourBeerDisplayBox", function() {
   $('.yourBeerDisplayBox').text('You earned ' + yourBeers + ' tonight!')
   alert('You get ' + yourBeers + ' today!');
 })
+
+$(document).on("click", "#resetButton", function() {
+  dailyCals = 0
+  $('.dailyTotal').text('Daily Running Calorie Total: ' + dailyCals)
+});
