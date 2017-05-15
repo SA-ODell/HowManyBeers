@@ -1,8 +1,4 @@
-# Q1 Project Proposal
-
-* Fork this repo and update this README file with your proposal.
-* Make sure to preview your proposal in a markdown preview and [use valid markdown syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-  * Unformatted/unreadable proposals will be rejected
+View project here:  https://steveodell.github.io/Q1-Project/index.html
 
 ## Project Description
 "How many beers can I have?"
