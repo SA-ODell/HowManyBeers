@@ -13,18 +13,21 @@ h1 {
 form { margin-bottom: 30px; }
 
 .navbar {
-	background-color: hsla(210, 100%, 25%, 1)
+	background-color: #1E4D2B
+}
+.navbar li {
+	color: #FFFFFF
 }
 .page-header{
   padding-top: 10px;
 }
 
 .jumbotron {
-	background-color: hsla(210, 100%, 50%, .5)
+	background-color: #C8C372
 }
 
 .btn {
-	background-color: hsla(210, 100%, 25%, 1)
+	background-color: #1E4D2B
 }
 
 #input {
