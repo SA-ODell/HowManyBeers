@@ -1,4 +1,4 @@
-View project here:  https://steveodell.github.io/Q1-Project/index.html
+View project here:  https://steveodell.github.io/HowManyBeers/
 
 ## Project Description
 "How many beers can I have?"
